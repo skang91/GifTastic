@@ -1,0 +1,43 @@
+body {
+    background: rgb(240, 193, 200);
+
+}
+
+.wrapper {
+    margin: 0 0 60px 0;
+}
+
+.button {
+    font-size: 14px;
+    background: lightpink;
+    border: none;
+    padding: 10px 15px;
+    margin: 6px;
+    border-radius: 10px;
+}
+
+#form {
+    float: right;
+}
+
+#add-input {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+}
+
+#add-button {
+    font-size: 14px;
+    background: lightpink;
+    border: none;
+    padding: 10px 15px;
+    margin: 6px;
+    border-radius: 10px;
+}
+
+#button-group {
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
