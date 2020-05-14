@@ -1,43 +1,68 @@
 body {
     background: rgb(240, 193, 200);
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
-    margin: 0 0 60px 0;
+    margin: 10px 10px 60px 10px;
 }
 
 .button {
-    font-size: 14px;
-    background: lightpink;
+    font-size: 15px;
+    background: rgb(253, 120, 140);
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 15px;
-    margin: 6px;
+    margin: 5px;
     border-radius: 10px;
 }
 
 #form {
+    margin-top: 10px;
     float: right;
 }
 
 #add-input {
     padding: 10px 15px;
-    font-size: 14px;
+    font-size: 15px;
     border: none;
     border-radius: 10px;
 }
 
 #add-button {
-    font-size: 14px;
-    background: lightpink;
+    font-size: 15px;
+    background: rgb(253, 120, 140);
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 15px;
-    margin: 6px;
+    margin: 5px;
     border-radius: 10px;
 }
 
 #button-group {
     margin-right: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.result-container {
+	margin: 30px 30px 10px 10px;
+}
+
+.result {
+    border-radius: 10px;
+}
+
+p {
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin: 0 0 5px 3px;
 }
 

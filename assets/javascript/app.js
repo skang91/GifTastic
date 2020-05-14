@@ -1,23 +1,33 @@
+//Variables
 var topics = [
     "Ariel",
     "Aurora",
     "Belle",
-    "Jasmine",
+    "Snow White",
     "Cinderella",
     "Elsa",
     "Rapunzel",
     "Pocahontas",
-    "Snow White",
     "Mulan",
 ];
 
-for(var i = 0; i < topics.length; i++) {
-	var button = $("<button>").text(topics[i]);
-	button.attr("data", topics[i]);
-	button.addClass("button");
-	$("#button-group").append(button);
-}
+//Functions
 
+// topics array buttons
+function buttonExpress(){
+	$("#button-group").empty();
+	
+	//create all buttons
+	for(var i = 0; i < topics.length; i++) {
+		var button = $("<button>").text(topics[i]);
+		button.attr("data", topics[i]);
+		button.addClass("button");
+		$("#button-group").append(button);
+	}
+}
+buttonExpress();
+
+//adding new button
 $("#add-button").on("click", function(e) {
 	e.preventDefault();
 	var alreadyExist = false;
@@ -35,7 +45,9 @@ $("#add-button").on("click", function(e) {
 	$("#add-input").val("");
 });
 
+//on button click
 $(document).on("click", ".button", function() {
+
 	var disneyprincess = $(this).attr("data");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=G01CJcbz5PHy2jCr2alITK4x7VjFBQD6&q=" +
     disneyprincess + "&limit=10&offset=0&rating=G&lang=en";
@@ -44,16 +56,19 @@ $(document).on("click", ".button", function() {
     	url: queryURL,
     	method: "GET"
     }).done(function(response) {
-    	var results = response.data;
-    	console.log(results);
-
+		//grab data
+		var results = response.data;
 		var resultsContainerSection = $("<section class='results-container'>");
 
+		//empty the git
+		$("#group").empty();
+
+		//for loop through the data
     	for(var i = 0; i < results.length; i++) {
     		var singleResultDiv = $("<div class='result-container'>");
-    		
+			
+			//pull the rate
     		var rating = results[i].rating;
-
     		var p = $("<p>").text("Rating: " + rating);
 
     		var img = $("<img class='result'>");
@@ -72,6 +87,7 @@ $(document).on("click", ".button", function() {
     });
 });
 
+//on click express
 $(document).on("click", ".result", function() {
 	var state = $(this).attr("data-state");
 
