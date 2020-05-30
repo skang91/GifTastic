@@ -1,6 +1,6 @@
 # GifTastic
 
-![picture](screenshot.png)
+![screenshot](screenshot.png)
 
 Instructions:
 1. Topics: Disney Princess
